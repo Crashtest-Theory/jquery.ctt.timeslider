@@ -1,0 +1,3 @@
+= jquery.ctt.timeslider =
+
+A jQuery plugin that creates a image slider with a timeline bar showing the time left for the next image to appear.
