@@ -1,0 +1,50 @@
+.ctt-time-slider {
+    /* Height and width is calculated in the plugin and cannot be set. */
+    position: relative;
+}
+
+.ctt-time-slider .active {
+    /* Height and width is calculated in the plugin and cannot be set. */
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    
+    background-color: #000;
+    
+}
+
+.ctt-time-slider .active .controls {
+    color: #fff;
+    display: block;
+    float: right;
+    height: 100%;
+    width: 10px;
+    
+    border: thin solid black;
+}
+
+.ctt-time-slider .bar {
+    background-color: #ccc;
+    height: 5px;
+}
+
+.ctt-time-slider .display {
+    /* Height and width of the image to be displayed. */
+    height: 348px;
+    width: 797px;
+}
+
+.ctt-time-slider .item {
+    float: left;
+}
+
+.ctt-time-slider .item a {
+    display: block;
+}
+
+.ctt-time-slider .item img {
+    /* HACK: Ensure the images are preloaded, but not viewable. */
+    height: 1px !important;
+    position: absolute;
+    width: 1px !important;
+}
