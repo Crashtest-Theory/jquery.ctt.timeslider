@@ -1,5 +1,10 @@
-/**
- * Creates an image slide show with a timeline bar.
+ /**
+ * A jQuery plugin that creates an image slide show with a timeline bar.
+ *
+ * Copyright (c) 2012, Crashtest Theory
+ *
+ * Licensed under the Revised BSD Licence:
+ * - http://www.opensource.org/licenses/BSD-3-Clause
  */
 (function($) {
     var TimeSlider = function($element, options) {
