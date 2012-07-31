@@ -80,7 +80,11 @@
                 
                 $nextItem = items.eq(index);
                 
-                $display.html($nextItem.children('img').eq(0).clone());
+                $img = $nextItem.children('img').eq(0).clone();
+                $anchor = $nextItem.find('a').eq(0).clone();
+                $anchor.html($img.wrap('<span></span>').parent().html());
+                
+                $display.html($anchor);
                 
                 items.eq(currentDisplayIndex).removeClass('current');
                 $nextItem.addClass('current');
