@@ -27,6 +27,10 @@
         $element.css('height', $display.outerHeight() + $bar.outerHeight() + itemHeight);
         $element.css('width', $display.outerWidth());
         
+        var itemBorderColor = '#ccc';
+        var itemBorderType = 'solid';
+        var itemBorderWidth = 1;
+        
         var currentDisplayIndex = -1;
         var currentTime = 0;
         var itemWidth = Math.floor($element.outerWidth() / items.length);
@@ -115,11 +119,22 @@
         ///
         
         /// Init.
+        var itemBorderString = itemBorderWidth + 'px ' + itemBorderType + ' ' + itemBorderColor;
+        
         $.each(items, function(index, value) {
             var $this = $(this);
             $this.attr('rel', index);
-            $this.css('width', itemWidth);
             $this.click(onItemClickEvent);
+            
+            if (index == 0) {
+                $this.css('width', itemWidth - (itemBorderWidth * 2));
+                $this.css('border-left', itemBorderString);
+            } else {
+                $this.css('width', itemWidth - itemBorderWidth);
+            }
+            
+            $this.css('border-right', itemBorderString);
+            $this.css('border-bottom', itemBorderString);
         });
         
         $controls.click(onPauseClickEvent);
